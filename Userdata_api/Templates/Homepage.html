@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <style>
+        body {
+            background-color: #00ffff;
+            font-family: cursive;
+            margin: 0;
+            padding: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p a {
+            color: #blue;
+            text-decoration: none;
+        }
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img{
+           display: block;
+           margin-left: auto;
+           margin-right: auto;
+           padding: 30px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <p>Welcome to our hub! Dive into our community's heart by exploring our Admin,
+        Groups, and Users pages—your gateways to molding our database. Whether tweaking details,
+        managing groups, or fine-tuning user profiles, this is your canvas.
+        Let's craft an even better experience together.
+    </p>
+    <button id="admin-button">Go to Admin Page</button>
+    <button id="apiroot_button">Go to APIRoot</button>
+    <img src="https://www.optimalanswers.com/wp-content/uploads/2021/05/API_403x270_224kb.png"
+         style="width: 30dp; height: 30dp" property="center" >
+
+    <script>
+        const adminButton = document.getElementById('admin-button');
+        const apirootbutton = document.getElementById('apiroot_button');
+
+        adminButton.addEventListener('click', function() {
+            window.location.href = '/admin/';
+        });
+        apirootbutton.addEventListener('click', function() {
+            window.location.href = '/root';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+Day-1
+
+Creating Django project and connecting Mysql database to it
+
+1- pip install mysqlclient for installing mysql connector.
+2 - go to django setting.py and locate the database     setting to modify it for connection with mysql.
+3- 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'User database',
+        'USER': 'root',
+        'PASSWORD': '',surya@123
+        'HOST': 'localhost',  #
+        'PORT': '3306',       #
+    }
+}
+
+
+***TO FREE THE PORT
+netstat -ano | findstr :8000
+tasklist | findstr 6396
+taskkill /F /PID 6396
+
+
+***To start mysql service
+Open the Services panel by pressing Win + R, typing services.msc, and hitting Enter.
+Look for the MySQL service in the list. Ensure it's running. If not, right-click and start the service.
+
+create admin interface succesfully.
+creating the database in mysql workbench.
+
+4 - migrating and creating tables.
+     python manage.py makemigrations   
+     python manage.py migrate 
+    
+
+*** ALL COMMANDS TILL NOW
+django-admin startproject project_name
+python manage.py startapp app_name
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+python manage.py sqlmigrate app_name migration_number
+python manage.py createsuperuser
+python manage.py changepassword username
+python manage.py admin_generator app_name
+python manage.py migrate servercontrol 0003 --fake   
+python manage.py showmigrations 
+python manage.py your_custom_command
+python manage.py check
+
+  
+ 
+
+Day-2
+pip install djangorestframework
+
+Userprofile (A model)
+
+Making a dataserialization file for Userprofile
+
+Using this serialization file inside View.
+
+Setting up the Url paths.
+
+
+Desiding endpoint:
+| Endpoint                | HTTP Method | Description                                |
+|-------------------------|-------------|--------------------------------------------|
+| /api/users/register/    | POST        | Register a new user                         |
+| /api/users/login/       | POST        | User login                                 |
+| /api/users/logout/      | POST        | User logout                                |
+| /api/users/profile/     | GET         | Retrieve user profile information          |
+| /api/users/profile/     | PUT         | Update user profile information            |
+| /api/users/password/    | PUT         | Change user password                       |
+| /api/users/reset-password/ | POST     | Request password reset                     |
+| /api/users/             | GET         | Retrieve list of users (admin only)        |
+| /api/users/{id}/        | GET         | Retrieve user details by ID (admin only)   |
+| /api/users/{id}/        | PUT         | Update user details by ID (admin only)     |
+| /api/users/{id}/        | DELETE      | Delete user by ID (admin only)             |
+
+Day-3
+Adding CSRF protection:
+
+MIDDLEWARE = [
+    # ... other middleware
+    'django.middleware.csrf.CsrfViewMiddleware',
+    # ... other middleware
+]
+
+Including CSRF Token in Postman:
+
+First, you need to obtain the CSRF token by sending a GET request to your Django API endpoint.
+Check the response headers for the csrftoken cookie. This cookie contains the CSRF token value.
+Copy the value of the csrftoken from the cookie.
+In your subsequent requests (POST, PUT, PATCH, DELETE) in Postman:
+Add a header with key X-CSRFToken and the value as the CSRF token obtained from the cookie.
+
+
+
+
+
+
+
+
+
+
