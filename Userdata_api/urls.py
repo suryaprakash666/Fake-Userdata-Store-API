@@ -5,7 +5,8 @@ from Userdata_api.views import Dataviewset
 
 router = DefaultRouter()
 router.register(r'dataview', Dataviewset)
+from Userdata_api import UserAuthentication
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]
