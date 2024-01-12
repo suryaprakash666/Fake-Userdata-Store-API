@@ -1,7 +1,6 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-
-# Create your models here.
 
 class Userdatamodel(models.Model):
     username = models.CharField(max_length=200, unique=True)
@@ -10,3 +9,4 @@ class Userdatamodel(models.Model):
 
     class Meta:
         db_table = 'api_userdatamodel'
+

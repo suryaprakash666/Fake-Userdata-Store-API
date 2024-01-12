@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated
 
 from Userdata_api.models import Userdatamodel
@@ -15,7 +15,7 @@ def datasubmission(request):
 
         Userdatamodel.objects.create(username=Username, email=Email, password=Password)
 
-        return HttpResponseRedirect('')
+        return HttpResponseRedirect('/Userhomeview/')
 
     elif request.method == 'GET':
-        return render(request, 'UserLoginPage.html')
+        return render(request, 'UserRegistrationPage.html')
