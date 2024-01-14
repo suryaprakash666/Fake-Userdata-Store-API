@@ -5,17 +5,18 @@
     <title>Login Here</title>
 </head>
 <body>
-   <form method="POST" action="{% url 'LoginPage' %}">
-  {% csrf_token %}
-  <label for="Username">Username:</label>
-  <input type="text" id="Username" name="username">
+    <form method="POST" action="{% url 'LoginPage' %}">
+        {% csrf_token %}
+        <label for="input_name">Name:</label>
+        <input type="text" id="input_name" name="Name">
 
-  <label for="Password">Password:</label>
-  <input type="password" id="Password" name="password">
+        <label for="input_password">Password:</label>
+        <input type="password" id="input_password" name="Password">
 
-  <button type="submit">Login</button>
-       <a href="/admin/">Go to Admin</a>
-</form>
+        <button type="submit"> Click to Login</button>
+        <a href="/admin/">Go to Admin</a>
 
+
+    </form>
 </body>
 </html>

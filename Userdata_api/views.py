@@ -3,8 +3,8 @@ from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
-from .Userdatamodel import Userdatamodel
-from .dataserializer import Userdataserializer
+from Userdata_api.models import Userdatamodel
+from Userdata_api.dataserializer import Userdataserializer
 
 
 # Create your views here.

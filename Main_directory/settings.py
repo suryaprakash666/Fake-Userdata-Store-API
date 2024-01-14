@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Userdata_api',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -102,11 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-AUTHENTICATION_BACKENDS = [
-    'Userdata_api.CustomAuthBackend.MyCustomBackend',
-    'django.contrib.auth.backends.ModelBackend',  # Keep the default for superusers
-]
-
 
 
 # Internationalization
