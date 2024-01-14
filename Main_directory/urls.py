@@ -22,6 +22,6 @@ urlpatterns = [
     path('root', include('Userdata_api.urls')),
     path('', Homepageview.homepageview, name='homepage'),
     path('register/', UserRegistrationView.datasubmission, name='submit_data'),
-    path('loginlink/', UserLoginView.loginview, name='LoginPage'),
-    path('Userhomeview/', UserHomeView.userhomeview, name='Userhomeview')
+    path('login/', UserLoginView.loginview, name='LoginPage'),
+    path('Userhome/', UserHomeView.userhomeview, name='Userhomeview')
 ]

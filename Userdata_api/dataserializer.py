@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from Userdata_api.models import Userdatamodel
+from .Userdatamodel import Userdatamodel
 
 
 class Userdataserializer(serializers.HyperlinkedModelSerializer):
