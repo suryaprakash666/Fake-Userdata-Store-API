@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'loginview.css' %}">
+
 <head>
     <meta charset="UTF-8">
     <title>Login Here</title>
@@ -14,7 +17,6 @@
         <input type="password" id="input_password" name="Password">
 
         <button type="submit"> Click to Login</button>
-        <a href="/admin/">Go to Admin</a>
 
 
     </form>
