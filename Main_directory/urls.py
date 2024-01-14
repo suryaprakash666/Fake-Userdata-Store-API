@@ -23,5 +23,5 @@ urlpatterns = [
     path('', Homepageview.homepageview, name='homepage'),
     path('register/', UserRegistrationView.datasubmission, name='submit_data'),
     path('loginlink/', UserLoginView.loginview, name='LoginPage'),
-    path('Userhomeview/', UserHomeView.userhomeview, name='Userhomeview')
+    path('Userhome/', UserHomeView.userhomeview, name='Userhomeview')
 ]

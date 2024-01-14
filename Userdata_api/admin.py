@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Userdatamodel
+from Userdata_api.UserdataModel import Userdatamodel
 
 
 @admin.register(Userdatamodel)
